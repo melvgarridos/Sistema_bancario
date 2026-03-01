@@ -66,7 +66,6 @@ saldo_total = valid_saldo + valid_saldo2
 
 # Hasta aqui estan los saldos de las cuentas validando que sean numeros
 
-# Transaccion en la cuenta 1 
 
     
 ta = 0
@@ -86,10 +85,12 @@ while ta !=  4:
     except ValueError:
         print("La opción ingresada no es válida. Por favor, ingrese un número correspondiente a una de las opciones disponibles.")
         continue
+
+    # Retirar dinero
         
     if transaccion_valida == 1:
 
-
+# tipo de cuenta
 
             tipo_cuenta = input("""
                 Por favor, seleccione la cuenta de la cual desea realizar el retiro de fondos:
@@ -240,16 +241,17 @@ while ta !=  4:
 
                 ta = 4
             
-
+# depositar dinero
     elif transaccion_valida == 2:
-
-
 
             numero_cuenta = input("""
                 Por favor, seleccione la cuenta a la cual desea realizar el depósito:
                 1. Cuenta 1
                 2. Cuenta 2 
                 Digite el número correspondiente a la opción deseada para continuar: """)
+            
+            # tipo de cuenta
+
             
             try:
                 numero_cuenta = int(numero_cuenta)
@@ -284,7 +286,7 @@ while ta !=  4:
                 continue
 
             ta = 4
-
+# salir del sistema
     elif transaccion_valida == 3:
         ta = 4
 
